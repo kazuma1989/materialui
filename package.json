@@ -2,6 +2,17 @@
   "name": "manual",
   "version": "0.1.0",
   "private": true,
+  "main": "./build/main.js",
+  "scripts": {
+    "start:dev": "react-scripts start",
+    "build": "react-scripts build",
+    "prestart": "echo \"\\033[0;31mBefore running 'start', you need to run 'build'.\\033[0m\"",
+    "start": "electron-forge start",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
   "dependencies": {
     "electron-compile": "^6.4.2",
     "electron-squirrel-startup": "^1.0.0",
@@ -9,15 +20,6 @@
     "react-dom": "^16.2.0",
     "react-scripts": "1.0.17"
   },
-  "scripts": {
-    "start": "electron-forge start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "package": "electron-forge package",
-    "make": "electron-forge make"
-  },
-  "main": "./build/main.js",
   "devDependencies": {
     "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-preset-env": "^1.6.1",
